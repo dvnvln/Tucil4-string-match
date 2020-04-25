@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>tucyl</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>TUCIL PATTERN MATCH - 13518116</h1>
+        <form id="main" enctype="multipart/form-data" method="POST">
+            <label for="pattern">Pattern</label><br>
+            <input type="text" name="pattern" id="pattern"><br>
+
+            <label for="naskah">Text</label><br>
+            <input type="file" multiple name="naskah" id="naskah"><br>
+
+            <input type="radio" name="algo" value="bm">
+            <label for="pattern">Boyer Moore's</label><br>
+
+            <input type="radio" name="algo" value="kmp">
+            <label for="pattern">Knuth-Morris-Pratt </label><br>
+
+            <input type="radio" name="algo" value="regex">
+            <label for="pattern">Regex</label><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <div id="result" />
+        <script src="{{ url_for('static', filename='index.js')}}"></script>
+    </body>
+</html>
